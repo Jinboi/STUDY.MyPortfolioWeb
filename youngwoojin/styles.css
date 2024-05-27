@@ -1,80 +1,128 @@
 @media (prefers-reduced-motion: no-preference) {
-  * {
-    scroll-behavior: smooth;
-  }
+    * {
+        scroll-behavior: smooth;
+    }
 }
 
 main {
-  padding: 5%;
+    padding: 5%;
 }
 
 header {
-  width: 100%;
-  height: 50px;
-  background-color: #1b1b32;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0; 
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  z-index: 1;
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    z-index: 1
 }
 
 nav {
-  width: 50%;
-  max-width: 300px;
-  height: 50px;
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
 }
 
-nav > ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 100%;
-}
+    nav > ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 100%;
+    }
 
-nav > ul > li {
-  color: #dfdfe2;
-  margin: 0 0.2rem;
-  padding: 0.2rem;
-  display: block;
-}
+        nav > ul > li {
+            color: #dfdfe2;
+            margin: 0 0.2rem;
+            padding: 0.2rem;
+            display: block;
+        }
 
-nav > ul > li:hover {
-  background-color: #dfdfe2;
-  color: #1b1b32;
-  cursor: pointer;
-}
+            nav > ul > li:hover {
+                background-color: #dfdfe2;
+                color: #1b1b32;
+                cursor: pointer;
+            }
 
 li > a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 .frontPhoto, profilePicture, imgOfFrontPhoto {
-  margin-top: 0px;
-  padding-top: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .imgOfFrontPhoto {
-  width: 40%;
-  height: 40%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform .2s; /* Animation */
-} 
-
-.imgOfFrontPhoto:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    width: 40%;
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform .2s; /* Animation */
 }
 
-.carousel-image {
-  width: 100%; /* Set the width of the images to 100% */
-  max-width: 350px;
-  height: 100%;
-  max-height: 350px; /* Automatically adjust the height to maintain aspect ratio */
-  o
+    .imgOfFrontPhoto:hover {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+.about {
+    margin-top: auto;
+    padding-top: 10%;
+}
+
+body {
+    background: #f5f6f7;
+    color: #1b1b32;
+    font-family: fantasy, sans-serif;
+    margin-top: 0px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    color: white;
+}
+
+h1, h2 {
+    font-family: inherit, sans-serif;
+}
+
+h1 {
+    margin-top: 10%;
+}
+
+h2 {
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0px;
+    padding-top: 60px;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+footer, address {
+    color: #dfdfe2;
+}
+
+address {
+    text-align: center;
+    padding: 0.3em;
+    margin-top: 0px;
+}
+
+    address > p {
+        font-size: 1.5em;
+        margin-bottom: 0px;
+    }
