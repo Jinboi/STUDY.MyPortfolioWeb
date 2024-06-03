@@ -1,82 +1,118 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youngwoo Jin's Portfolio</title>
-
+    <title>YWJ</title>
+        <link
+            rel="icon"
+            href="letter-y.png"
+            type="image/x-icon"
+        />    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script>
+    window.addEventListener('scroll', function() {
+        var profileImg = document.getElementById('imgOfFrontPhoto');
+        var profileText = document.querySelector('.profileText');
+        var profileRect = profileImg.getBoundingClientRect();
+        
+        // Calculate the height of the profile picture
+        var profileHeight = profileRect.height;
+        
+        // Calculate the height of the profile text
+        var profileTextHeight = profileText.offsetHeight;
+        
+        // Calculate the distance scrolled
+        var scrollTop = window.scrollY;
+        
+        // Calculate the maximum offset for the profileText
+        var maxOffset = profileHeight - profileTextHeight;
+        
+        // Add an additional offset to move the text further down
+        var additionalOffset = 20; // Adjust this value as needed
+        
+        // Calculate the offset for the profileText
+        var offset = Math.max(0, Math.min(maxOffset - additionalOffset, scrollTop - profileRect.top));
+        
+        // Set the bottom offset for the profileText
+        profileText.style.bottom = offset + 'px';
+    });
+</script>
+
+
+
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a href="https:youngwoojin.surge.sh">Youngwoo Jin's Portfolio</a>
-            </li>
-        </ul>
-    </nav>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-    </nav>
-
-</header>
 <body>
-    <main>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+   <main class="container-fluid">
         <section id="frontPhoto" class="frontPhoto">
-            <div id="profile" class="profilePicture">
-                <img id="imgOfFrontPhoto" class="imgOfFrontPhoto" src="profileFull.jpg" alt="profile">
+            <div id="profile" class="profilePicture text-center position-relative">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img id="imgOfFrontPhoto" class="img-responsive" src="profileBW.jpg" alt="profile">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="profileText">
+                                    <h1>Youngwoo Jin</h1>
+                                    <h3>The Journey Is Its Own Reward</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="about" class="about">
+       <div class="content">    
+        <section id="about" class="about text-center">
             <h2>About</h2>
-            <!-- Section for About-->
-            <!-- Add Resume? Description, background, education, career blah blah-->
-            <h3>
-                <!-- Add Resume? -->
-                <ul>
-
-
-                    <li>
-                        Hello, I'm Youngwoo<br /><br />
-                        <h4>
-                            I'm a goal-driven, hard-working and studious person who enjoys problem-solving and the feeling of fulfillment that I can share with co-workers over laughters after a long day.
-                        </h4><br />
-                    </li>
-
-                    <li>
-                        This is me. I'm Saying No<br /><br />
-                        <h4>
-                            That's right. I'm saying No. <br /><br />
-                            No―I'm not going to say "Sorry, honey....but we can't afford this..." anymore. <br />
-                            No―I'm not going to stay in a dead-end career forever.<br />
-                            No―I'm not going to live a life with resentments and regrets.
-                        </h4><br />
-                    </li>
-
-                    <li>
-                        So Here's My Journey<br /><br />
-                        <h4>
-                            So I've created this website to demonstrate my portfolio and resume.  <br />
-                            You can find my resume in <a href="youngwoojinresume.pdf">here</a> where you can see my education and employment history. You can see my coding portfolio below.
-                        </h4><br />
-                    </li>
-
-                </ul>
-            </h3>
-
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 text-left">
+                    <p>Hello, I'm Youngwoo</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 text-left">
+                    <p>This is me. I'm Saying No</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-left">
+                    <p>So Here's My Journey</p>
+                    <p>So I've created this website to demonstrate my portfolio and resume. You can find my resume <a href="youngwoojinresume.pdf">here</a> where you can see my education and employment history. You can see my coding portfolio below.</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects" class="projects">
             <h2>Projects</h2>
-
             <!-- Section for Coding Projects-->
         </section>
 
@@ -84,16 +120,19 @@
             <h2>FAQ</h2>
             <!-- section for FAQ like freecoding-->
         </section>
+    
+       </div>
     </main>
-    <!-- Page Layout Stuff-->
-    <!-- I guess all done? Add more stuff here if you got any good ideas-->
+    <footer>
+        <div class="container">
+            <address>
+                <p>Youngwoo Jin</p>
+                <a href="#">Youngwoo Jin's Portfolio</a>
+                <p>duddnwkfgo7@gmail.com</p>
+            </address>
+        </div>
+    </footer>
 </body>
-<footer>
-    <!-- like freecoding camp. links that jumps up to different parts of the page-->
-    <address>
-        <br /><p>Youngwoo Jin</p><br />
-        <a href="https:youngwoojin.surge.sh">Youngwoo Jin's Portfolio</a>
-        <br />duddnwkfgo7@gmail.com <br />
-    </address>
-</footer>
+    
+    
 </html>
