@@ -2,37 +2,52 @@
 .frontPhoto img {
     width: 100%;
     max-width: 100%;
-    height: auto;
-    opacity: 0.65;
+    height: 100%;
+    opacity: 0.98;
+    filter: blur(3px); /* Adjust the blur value as needed */
+    margin-top: 0%; /* Adjusted margin-top as a percentage */
 }
 
 .profileText {
-    position: absolute;
-    bottom: 0;
+    position: absolute; 
+    bottom: 10%; /* Adjusted position */
     left: 5%;
     width: 90%; /* Adjusted width */
-    padding-bottom: 10%;
+    padding-bottom: 15%; /* Adjusted padding */
     box-sizing: border-box;
     color: white;
     text-align: left;
+    display: block; /* Show by default */
+}
+
+@media only screen and (max-width: 768px) {
+    .profileText {
+        display: none; /* Hide on small screens */
+    }
+
+    /* Change navbar text color to black when toggled */
+    .navbar-collapse.in .navbar-nav > li > a {
+        color: black;
+    }
 }
 
 body {
     background: #f5f6f7;
     color: #1b1b32;
-    font-family: fantasy, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 h1,
 h2 {
-    font-family: inherit, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
     margin-top: 10%;
     font-size: 100px;
+    font-weight: 700; 
 }
 
 h2 {
@@ -43,7 +58,7 @@ h2 {
 
 .profileText h3 {
     font-size: 36px;
-    padding-left: 50px;
+    padding-left: 13px;
 }
 
 /* Footer */
@@ -76,17 +91,27 @@ address > p {
 
 /* Header and Navbar */
 header {
-    background-color: #1b1b32;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
     top: 0;
     left: 0;
     right: 0;
     z-index: 1030;
     padding-left: 0;
     padding-right: 0;
+    color: red; /* Set text color to red */
+    position: relative; /* Ensure relative positioning */
 }
+
 
 .navbar {
     margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    border: none; /* Remove the bottom border */
+    z-index: 1;
+    position: absolute; /* Ensure absolute positioning */
+    top: 0; /* Position navbar at the top */
+    left: 0; /* Position navbar at the left */
+    right: 0; /* Position navbar at the right */
 }
 
 .navbar-nav {
@@ -96,6 +121,15 @@ header {
 .navbar-nav > li {
     display: inline-block;
     float: none;
+    margin-left: 50px; /* Adjusted left margin */
+    padding-top: 2%;
+    
+}
+
+.navbar-nav > li > a p {
+    color: white;
+    font-weight: bold;
+    font-size: 140%;
 }
 
 .navbar-collapse {
