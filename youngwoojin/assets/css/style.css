@@ -156,6 +156,10 @@ img {
     flex: none;
 }
 
+#github-icon {
+    font-size: 72px;
+}
+
 /* SERVICE */
 .service {
     position: relative;
